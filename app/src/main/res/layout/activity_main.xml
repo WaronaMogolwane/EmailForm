@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtContactUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTACT US"
+        android:textSize="20sp"
+        android:layout_margin="50px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/layoutEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="50px"
+        android:layout_marginTop="100px"
+        app:layout_constraintTop_toBottomOf="@+id/txtContactUs">
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25px"
+            android:text="To" />
+
+        <EditText
+            android:id="@+id/editTxtEmail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtEmail"
+            android:height="30dp"
+            android:background="@drawable/edit_text_background" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="50px"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEmail">
+
+        <TextView
+            android:id="@+id/txtSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:layout_marginBottom="25px"/>
+
+        <EditText
+            android:id="@+id/editTxtSubject"
+            android:height="30dp"
+            android:layout_width="300dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSubject" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="50px"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSubject">
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25px"
+            android:text="Message"
+            android:layout_alignStart="@+id/editTxtMessage"/>
+
+        <EditText
+            android:id="@+id/editTxtMessage"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:padding="10dp"
+            android:layout_below="@+id/txtMessage"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSend"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Send"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMessage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout
+   >
